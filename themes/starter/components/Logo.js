@@ -25,15 +25,13 @@ export const Logo = props => {
     const throttleMs = 200
     const navBarScrollListener = throttle(() => {
       const scrollY = window.scrollY
-      // 何时显示浅色或白底的logo
-      const homePageNavBar = router.route === '/' && scrollY < 10 // 在首页并且视窗在页面顶部
-
-      if (white || isDarkMode || homePageNavBar) {
+      // 由于导航栏现在有白色背景，Logo应该始终使用深色
+      if (white || isDarkMode) {
         setLogo(logoWhite)
         setLogoTextColor('text-white')
       } else {
         setLogo(logoNormal)
-        setLogoTextColor('text-black')
+        setLogoTextColor('text-gray-800')
       }
     }, throttleMs)
 
@@ -45,8 +43,8 @@ export const Logo = props => {
   }, [isDarkMode, router])
 
   return (
-    <div className='w-60 max-w-full px-4'>
-      <div className='navbar-logo flex items-center w-full py-5 cursor-pointer'>
+    <div className='flex-shrink-0'>
+      <div className='navbar-logo flex items-center cursor-pointer'>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         {logo && (
           <LazyImage
