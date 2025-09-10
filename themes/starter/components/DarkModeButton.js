@@ -19,7 +19,7 @@ export const DarkModeButton = () => {
                   className="sr-only"
                 />
 
-                <span className={`block ${router.route === '/' ? 'text-white' : ''} dark:hidden`}>
+                <span className="block text-gray-800 dark:hidden">
                   <svg
                     className="fill-current"
                     width="24"
@@ -34,7 +34,7 @@ export const DarkModeButton = () => {
                   </svg>
                 </span>
 
-                <span className="hidden text-white dark:block">
+                <span className="hidden text-gray-800 dark:block">
                   <svg
                     className="fill-current"
                     width="24"
