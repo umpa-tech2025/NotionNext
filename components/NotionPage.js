@@ -110,6 +110,28 @@ const NotionPage = ({ post, className }) => {
       elements?.forEach(element => {
         element?.remove()
       })
+
+      // 处理Notion页面中的HTML标签
+      const textElements = document.querySelectorAll('.notion-text, .notion-h, .notion-p')
+      textElements.forEach(element => {
+        if (element.innerHTML) {
+          // 将转义的HTML标签还原为真正的HTML
+          let html = element.innerHTML
+          html = html.replace(/&lt;br\s*\/?&gt;/gi, '<br>')
+          html = html.replace(/&lt;center&gt;/gi, '<center>')
+          html = html.replace(/&lt;\/center&gt;/gi, '</center>')
+          html = html.replace(/&lt;strong&gt;/gi, '<strong>')
+          html = html.replace(/&lt;\/strong&gt;/gi, '</strong>')
+          html = html.replace(/&lt;em&gt;/gi, '<em>')
+          html = html.replace(/&lt;\/em&gt;/gi, '</em>')
+          html = html.replace(/&lt;a\s+href="([^"]*)"&gt;/gi, '<a href="$1">')
+          html = html.replace(/&lt;\/a&gt;/gi, '</a>')
+          
+          if (html !== element.innerHTML) {
+            element.innerHTML = html
+          }
+        }
+      })
     }, 1000) // 1000 毫秒 = 1 秒
 
     // 清理定时器，防止组件卸载时执行
