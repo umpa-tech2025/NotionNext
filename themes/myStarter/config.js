@@ -198,8 +198,8 @@ const CONFIG = {
     '先检查Notion_Page_ID是否正确配置，其次由于博客的每个页面都有独立缓存，刷新网页后即可解决',
 
   // 团队成员区块
-  STARTER_TEAM_ENABLE: true, // 团队成员区块开关
-  STARTER_TEAM_TITLE: '会员架构',
+  STARTER_TEAM_ENABLE: false, // 团队成员区块开关
+  STARTER_TEAM_TITLE: '組織架構',
   STARTER_TEAM_TEXT_1: '',
   STARTER_TEAM_TEXT_2:
     '',
@@ -207,25 +207,29 @@ const CONFIG = {
   // 这里不支持CONFIG和环境变量，需要一一修改此处代码。
   STARTER_TEAM_ITEMS: [
     {
-      STARTER_TEAM_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa06c61bb-980e-4180-bc18-c15f92c78bb4%2Ftangly1024.jpg?table=collection&id=8e7acf17-de09-4fa1-abde-b5b80ad4a813&t=8e7acf17-de09-4fa1-abde-b5b80ad4a813&width=100&cache=v2',
-      STARTER_TEAM_ITEM_NICKNAME: 'Tangly',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Developer'
+      // STARTER_TEAM_ITEM_AVATAR:'',
+      STARTER_TEAM_ITEM_NICKNAME: '澳門大學研究生會',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'umpa@um.edu.mo'
     },
     {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-01.png',
-      STARTER_TEAM_ITEM_NICKNAME: 'Melissa Tatcher',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Marketing Expert'
+      STARTER_TEAM_ITEM_AVATAR: '',
+      STARTER_TEAM_ITEM_NICKNAME: '澳門大學研究生會主席團',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'umpa.assembly@um.edu.mo'
     },
     {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-02.png',
-      STARTER_TEAM_ITEM_NICKNAME: 'Stuard Ferrel',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Digital Marketer'
+      STARTER_TEAM_ITEM_AVATAR: '',
+      STARTER_TEAM_ITEM_NICKNAME: '澳門大學研究生會監事會',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'umpa.superbd@um.edu.mo'
     },
     {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-03.png',
-      STARTER_TEAM_ITEM_NICKNAME: 'Eva Hudson',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Creative Designer'
+      STARTER_TEAM_ITEM_AVATAR: '',
+      STARTER_TEAM_ITEM_NICKNAME: '澳門大學研究生畢業生委員會',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'umpa.gradcom@um.edu.mo'
+    },
+    {
+      STARTER_TEAM_ITEM_AVATAR: '',
+      STARTER_TEAM_ITEM_NICKNAME: '澳門大學研究生會新媒體中心',
+      STARTER_TEAM_ITEM_DESCRIPTION: 'umpa.media@um.edu.mo'
     }
   ],
 
