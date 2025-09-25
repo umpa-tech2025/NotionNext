@@ -17,9 +17,12 @@ export const Blog = ({ posts }) => {
           <div className='-mx-4 flex flex-wrap justify-center'>
             <div className='w-full px-4'>
               <div className='mx-auto mb-[60px] max-w-[485px] text-center'>
-                <span className='mb-2 block text-lg font-semibold text-primary'>
-                  {siteConfig('STARTER_BLOG_TITLE')}
-                </span>
+                <span 
+                  className='mb-2 block text-lg font-semibold text-primary text-center'
+                  dangerouslySetInnerHTML={{
+                    __html: siteConfig('STARTER_BLOG_TITLE')?.replace(/\n/g, '<br>')
+                  }}
+                />
                 <h2 className='mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]'>
                   {siteConfig('STARTER_BLOG_TEXT_1')}
                 </h2>

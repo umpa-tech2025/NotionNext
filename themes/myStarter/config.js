@@ -235,7 +235,7 @@ const CONFIG = {
 
   // 博客文章区块
   STARTER_BLOG_ENABLE: true, // 首页博文区块开关
-  STARTER_BLOG_TITLE: '往期文章',
+  STARTER_BLOG_TITLE: '往期文章\nPast Articles',
   STARTER_BLOG_COUNT: 3, // 首页博文区块默认展示前3篇文章
   STARTER_BLOG_TEXT_1: '',
   STARTER_BLOG_TEXT_2:
@@ -377,6 +377,11 @@ const CONFIG = {
 
   STARTER_POST_REDIRECT_ENABLE: false, // 默認開啟重定向
   STARTER_POST_REDIRECT_URL: 'https://blog.tangly1024.com', // 重定向域名
-  STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || false // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
+  STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || false, // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
+
+  // 公告配置
+  STARTER_ANNOUNCEMENT_ENABLE: true, // 是否启用公告功能
+  STARTER_ANNOUNCEMENT_POSITION: 'top', // 公告位置：top(顶部) | bottom(底部)
+  STARTER_ANNOUNCEMENT_STYLE: 'default', // 公告样式：default(默认) | compact(紧凑) | banner(横幅)
 }
 export default CONFIG
