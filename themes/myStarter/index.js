@@ -9,6 +9,7 @@ import { isBrowser } from '@/lib/utils'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { About } from './components/About'
+import Announcement from './components/Announcement'
 import { BackToTopButton } from './components/BackToTopButton'
 import { Blog } from './components/Blog'
 import { Brand } from './components/Brand'
@@ -108,6 +109,10 @@ const LayoutIndex = props => {
     <>
       {/* 英雄区 */}
       {siteConfig('STARTER_HERO_ENABLE', true, CONFIG) && <Hero {...props} />}
+      {/* 公告 */}
+      {siteConfig('STARTER_ANNOUNCEMENT_ENABLE', false, CONFIG) && siteConfig('STARTER_ANNOUNCEMENT_POSITION', 'top', CONFIG) === 'top' && (
+        <Announcement notice={props?.notice} />
+      )}
       {/* 合作伙伴 */}
       {siteConfig('STARTER_BRANDS_ENABLE', true, CONFIG) && <Brand />}
       {/* 产品特性 */}
@@ -141,6 +146,11 @@ const LayoutIndex = props => {
 
       {/* 行动呼吁 */}
       {siteConfig('STARTER_CTA_ENABLE', true, CONFIG) && <CTA />}
+      
+      {/* 底部公告 */}
+      {siteConfig('STARTER_ANNOUNCEMENT_ENABLE', false, CONFIG) && siteConfig('STARTER_ANNOUNCEMENT_POSITION', 'top', CONFIG) === 'bottom' && (
+        <Announcement notice={props?.notice} />
+      )}
     </>
   )
 }
